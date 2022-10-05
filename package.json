@@ -1,0 +1,28 @@
+{
+    "name": "11ty-2589",
+    "description": "Demonstration of Problem Rendering Nunjucks Include Template",
+    "version": "0.0.1",
+    "author": "Brian Tremblay <dev@btrem.com>",
+    "bugs": {
+        "url": "https://github.com/btrem"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.2",
+        "@11ty/eleventy-img": "^1.0.0"
+    },
+    "homepage": "https://github.com/btrem/#readme",
+    "keywords": [],
+    "license": "MPL-2.0",
+    "main": ".eleventy.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/btrem/.git"
+    },
+    "scripts": {
+        "build": "npx eleventy",
+        "shush": "ELEVENTY_ENV=development npx eleventy --serve --quiet",
+        "start": "ELEVENTY_ENV=development npx eleventy --serve",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    }
+}

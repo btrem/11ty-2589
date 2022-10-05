@@ -1,0 +1,14 @@
+---
+title: List of Posts Using Included Snippet Without Any Shortcode
+---
+
+            <p>
+                This page uses a nunjucks <code>include</code>
+                statement to insert a snippet.
+                The snippet has no shortcode, and it works.
+                Below is a list of posts:
+            </p>
+
+{% for post in collections.all %}
+{% include "snippet.njk" %}
+{% endfor %}

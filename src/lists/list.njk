@@ -1,0 +1,29 @@
+---
+title: List of Posts Using Directly Embedded Markup With Shortcode
+---
+
+            <p>
+                This page lists all posts with their
+                featured image using a nunjucks loop.
+                There is no <code>include</code> code.
+                Instead, the elements are placed directly
+                in the loop, including a picture shortcode
+                to show each post's featured image as
+                defined in its yaml front matter.
+                The list of posts, with the images,
+                are shown below:
+            </p>
+
+{% for post in collections.all %}
+            <article>
+
+                <h2>
+                    <a href="{{ post.url }}">{{ post.data.title }}</a>
+                </h2>
+
+                {% picture post.data.featuredImage %}
+
+                {{ post.templateContent | safe }}
+
+            </article>
+{% endfor %}

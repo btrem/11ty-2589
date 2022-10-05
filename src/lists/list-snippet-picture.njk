@@ -1,0 +1,26 @@
+---
+title: List of Posts Using Included Snippet With Shortcode
+---
+
+            <p>
+                This page lists all posts using
+                a nunjucks <code>include</code>
+                statement to insert a snippet.
+                The snippet has a shortcode to add each
+                post's featured image as defined in its
+                yaml front matter.
+                But the list does not work.
+                There is no list below.
+            </p>
+
+{% for post in collections.all %}
+{% include "snippet-picture.njk" %}
+{% endfor %}
+
+            <p>
+                If I remove the shortcode from the included template,
+                it works. Here's a
+                <a href="/list-snippet.html">list of posts where the
+                included template does <em>not</em> have a picture
+                shortcode</a>.
+            </p>
